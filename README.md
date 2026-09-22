@@ -27,3 +27,14 @@ Landing premium, login/registro, dashboard por rol, miembros, planes, membresía
 1. Copie la carpeta `gym-diana` a `C:\laragon\www\`
 2. Abra http://localhost/gym-diana/
 3. Listo. Para producción cambie a HTTPS y claves fuertes.
+
+## Estructura del proyecto
+```
+gym-diana/
+├── index.php (landing premium) · registro.php · login.php · logout.php
+├── dashboard.php (panel por rol: admin, entrenador, recepción, cliente)
+├── config.php (PDO SQLite + sesiones endurecidas + CSRF)
+├── assets/style.css · .htaccess (protege config y DB)
+└── database/gym.db (SQLite autocontenida: miembros, planes, pagos, rutinas, tienda…)
+```
+Stack: PHP + SQLite + sesiones + auditoría.
